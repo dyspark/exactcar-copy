@@ -1,11 +1,15 @@
 'use client'
 
+import { useRouter } from 'next/navigation';
+
 import Image from 'next/image';
 import { CustomButton } from '.';
 
 const Hero = () => {
-    const handleScroll = () => {
-
+    const router = useRouter()
+    
+    const handleSearch = () => {
+        router.push('/search')
     }
 
     return (
@@ -22,7 +26,7 @@ const Hero = () => {
                 <CustomButton
                     title='Explore Cars'
                     containerStyles='bg-primary-blue text-white rounded-full mt-10'
-                    handleClick={handleScroll}
+                    handleClick={handleSearch}
                 />
             </div>
             <div className='hero__image-container'>
